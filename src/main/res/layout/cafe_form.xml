@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main2Activity">
+
+    <ImageView
+        android:id="@+id/cafe_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/cafe1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/select_cuisine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#7DC1E1"
+        android:text="Select Cuisine:"
+        app:layout_constraintTop_toBottomOf="@id/cafe_bg"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/select_cuisine"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/select_dine_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select dining date: "
+        app:layout_constraintTop_toBottomOf="@id/recyclerV"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/select_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/select_dine_date"
+        app:layout_constraintStart_toStartOf="parent"
+        android:drawableRight="@drawable/calendar"
+        android:ems="7"
+        />
+
+    <TextView
+        android:id="@+id/no_of_people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="# of people"
+        android:layout_marginLeft="110dp"
+        app:layout_constraintTop_toBottomOf="@id/recyclerV"
+        app:layout_constraintStart_toEndOf="@id/select_dine_date"/>
+
+    <ImageButton
+        android:id="@+id/down_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:src="@drawable/arrow_down"
+        app:layout_constraintTop_toBottomOf="@id/no_of_people"
+        app:layout_constraintStart_toEndOf="@id/select_date"/>
+
+    <TextView
+        android:id="@+id/nu_of_pe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:ems="2"
+        app:layout_constraintTop_toBottomOf="@id/no_of_people"
+        app:layout_constraintStart_toEndOf="@id/down_btn"
+        />
+
+    <ImageButton
+        android:id="@+id/up_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_up"
+        app:layout_constraintTop_toBottomOf="@id/no_of_people"
+        app:layout_constraintStart_toEndOf="@id/nu_of_pe"/>
+
+    <TextView
+        android:id="@+id/select_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select time: "
+        app:layout_constraintTop_toBottomOf="@id/select_date"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/select_tim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/clock"
+        android:ems="7"
+        app:layout_constraintTop_toBottomOf="@id/select_time"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/reserve_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESERVE"
+        app:layout_constraintTop_toBottomOf="@id/select_tim"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
